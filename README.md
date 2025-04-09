@@ -1,30 +1,18 @@
-# Clock in Canvas
+Ժամացույցը մշակվել է HTML, CSS և JavaScript-ի միջոցով՝ օգտագործելով HTML5 `<canvas>` տարրը, որը հնարավորություն է տալիս գրանցել 2D գծագրեր։ Կոդը կազմված է մի քանի մասերից, որոնք յուրաքանչյուրն իր հերթին ապահովում են ժամացույցի ճիշտ աշխատանքը:
 
-This project creates a clock using the HTML5 `<canvas>` element and JavaScript. The clock displays the current time using hour, minute, and second hands on a circular clock face, with additional ticks marking the hours.
+### Կոդի հիմնական բաղադրիչները
 
-## Features
+1. **Canvas տարրը**: Ժամացույցը նկարվում է HTML5 Canvas-ի վրա, որը օգտագործում է `getContext("2d")` մեթոդը գծերի և առարկաների նկարելու համար։
 
-- **Analog Clock**: Displays a working analog clock with three hands for hours, minutes, and seconds.
-- **Canvas Rendering**: Uses the HTML5 Canvas API to draw the clock and its components.
-- **Responsive Layout**: The clock adapts to the size of the canvas.
+2. **Ժամացույցի շրջանակ**: Ժամացույցի սլաքները և ժամերի նշանները ստեղծվում են `drawLine` և `drawRect` ֆունկցիաների միջոցով։ 
 
-## Project Setup
+3. **Սլաքների շարժում**: Ժամացույցը ունի երեք հիմնական սլաք՝ ժամի, րոպեի և վայրկյանի։ Ամեն մեկի համար հաշվարկվում է համապատասխան անկյունը `Date` օբյեկտի միջոցով, որը վերցնում է ընթացիկ ժամանակը։ Ապա այդ անկյունները օգտագործվում են `arrowDraw` ֆունկցիայի միջոցով, որպեսզի սլաքները շարժվեն։
 
-1. **HTML File**: The clock is implemented using HTML, CSS, and JavaScript. The main JavaScript code is written in a `<script>` tag within the HTML.
-2. **Canvas Setup**: The clock face is drawn on an HTML canvas, using JavaScript to manipulate the drawing context.
+4. **Անիմացիա**: `requestAnimationFrame` մեթոդը օգտագործվում է, որպեսզի ժամացույցը շարունակաբար թարմացվի և ցույց տա ժամանակի փոփոխությունները։ Այս մեթոդը ապահովում է անընդհատ թարմացում։
 
-## How to Run
 
-1. Clone the repository or copy the code to a local HTML file.
-2. Open the HTML file in a web browser (works best with modern browsers).
-3. The clock will automatically start and update in real-time.
+Այսպիսի նախագիծը թույլ է տալիս հասկանալ HTML5 Canvas API-ի բազային գործառույթները և JavaScript-ի կիրառությունը գրաֆիկական ծրագրավորման մեջ:
 
-## Code Explanation
-
-- **Canvas Setup**: The canvas element is accessed via `getElementById`, and its drawing context is obtained using `getContext("2d")`.
-- **Clock Drawing**: The clock face, hour ticks, and hands (for seconds, minutes, and hours) are drawn using various functions like `drawLine` and `drawRect`.
-- **Time Calculation**: JavaScript's `Date` object is used to get the current time, and based on that, the angle of each clock hand is calculated.
-- **Animation**: The `requestAnimationFrame` method is used to continuously update the clock every frame.
-
-- Special thanks to @mrzaxaryan and [https://nostdlib.com](https://nostdlib.com) company for teaching and support.
-- Also, many thanks to ChatGPT for guidance and assistance throughout the development.
+Շնորհակալություն՝ @mrzaxaryan-ին և https://nostdlib.com ընկերությանը՝ ուսուցման համար։
+Նաև հատվածներ կան, որոնք վերլուծելու համար օգտվել եմ ChatGPT-ից։
+Կայքը դիտելու համար այցելեք GitHub Pages հղումը՝ https://elbegarnostdlib.github.io/clock/
